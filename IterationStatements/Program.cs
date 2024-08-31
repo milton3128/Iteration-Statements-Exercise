@@ -86,19 +86,20 @@
         //    - Returns true if the candidate can vote, false otherwise.
         //    - Hint: Use `int.Parse()` or the safer `int.TryParse()` for extra practice in handling user input.
 
-        public static void CanVote()
+        public static bool CanVote(int age)
         {
             Console.WriteLine("Input your age");
-            var age = int.Parse(Console.ReadLine());
+            Console.ReadLine();
+           
             if (age >= 18)
             {
                 Console.WriteLine("Old enough to Vote!");
-                //return true;
+                return true;
             }
             else
             {
                 Console.WriteLine("Not old enough Vote!");
-                //return false;
+                return false;
             }
         }
         
@@ -137,8 +138,31 @@
         // Use various test cases to ensure they work as expected.        
         static void Main(string[] args)
         {
-             DisplayMultiplicationTable(2);
+
+            DisplayMultiplicationTable(2);
            Console.WriteLine();
+
+           IsPositive(0);
+           Console.WriteLine();
+
+           CanVote(40);
+           
+           IsInRange(2);
+           Console.WriteLine();
+
+           CanVote(90);
+           Console.WriteLine();
+
+           IsEven(12);
+           Console.WriteLine();
+
+           PrintNumbers();
+           
+           PrintEveryThirdNumber();
+
+           AreNumbersEqual(2, 2);
+
+
         }
     }
 }
